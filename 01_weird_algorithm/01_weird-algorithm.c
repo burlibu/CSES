@@ -20,10 +20,16 @@ Output:
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
-int foo(int n){
-  if (n < 1 || n > 10e6) return -1;
-  printf("%d ",n);
+bool D = true;
+void db(){
+  if (D) printf("Debug\n");
+}
+
+
+int foo(long long n){
+  printf("%lld ",n);
   if (n == 1) {
     return 0;
   }
@@ -36,13 +42,13 @@ int foo(int n){
 }
 
 int main() {
-  int n = 0;
-  puts("inserisci numero:");
-  if (scanf("%d", &n) != 1) {
+  long long n = 0;
+  //puts("inserisci numero:");
+  if (scanf("%lld", &n) != 1) {
     fprintf(stderr, "Input non valido\n");
     return 1;
   }
-  printf("Numero scelto: %d\n", n);
+  //printf("Numero scelto: %d\n", n);
   foo(n);
   return 0;
 }
