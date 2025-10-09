@@ -16,12 +16,12 @@ Input:
 Output:
 4
 **/
-
+//gcc -Wall code.c
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
-bool D = true;
+bool D = false;
 void db(){
   if (D) printf("Debug\n");
 }
@@ -34,8 +34,6 @@ long long sommatoria(long long n) {
   return res;
 }
 
-
-
 int main(){
   long long n;
   if ( scanf("%lld", &n ) != 1) return -1;
@@ -45,9 +43,9 @@ int main(){
   long long k = 0;
   for (long long i = 1; i <= n-1; i++) {
     long long number;
-    number = scanf("%lld", &number);
+    int r = scanf("%lld", &number);
     k = k+number;
-    if (D) printf("K = : %lld\n",k);
+    if (D) printf("K =  %lld\n",k);
     }
     if (D) printf("K finale: %lld\n",k);
     long long res = sum-k;
