@@ -35,7 +35,7 @@ int main() {
     cout << 1;
     return 0;
   }
-  long unsigned int i = 1;
+  long long  int i = 1;
   long long  longest = 1;
   long long streak = 1;
   while (i < sequence.length()) {
@@ -49,8 +49,8 @@ int main() {
     } else { // se è diverso da quello prima rinizia la streak
       if (streak > longest) {
         longest = streak;
-        streak = 1;
       }
+      streak = 1;
     }
     i++;
   }
