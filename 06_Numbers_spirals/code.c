@@ -18,6 +18,13 @@ void db(){
   if (D) printf("Debug\n");
 }
 
+void build_spiral() {
+  long long int number = 1;
+  long long int columns = 1;
+  long long int rows = 1;
+  long long int square_size = 1;
+}
+
 int main(){
   long long t;
   int r = scanf("%lld",&t);
