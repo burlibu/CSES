@@ -1,19 +1,24 @@
 def build_spiral(y,x):
+  spiral = 0
   number = 1
   spiral[y][x]
-  end_row=m
-  end_col=n
+  spiral[1][1] = 1 # inizio
+  end_row=y #righe
+  end_col=x #colonne
   for i in range y*x:
-    
-  return 0
+
+  return spiral
   
+def get_spiral_index(y,x):
+    
+
 def main:
   tests=0
-  spiral = 0
+  spiral = build_spiral(y,x)
   input(tests)
   for i in range(tests):
     input(y,x)
-    build_spiral(y,x)
+    get_spiral_index(y,x)
     print(f"{spiral[y,x]}")
   
   
