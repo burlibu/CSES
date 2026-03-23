@@ -1,24 +1,20 @@
-def build_spiral(y,x):
-  spiral = 0
-  number = 1
-  spiral[y][x]
-  spiral[1][1] = 1 # inizio
-  end_row=y #righe
-  end_col=x #colonne
-  for i in range y*x:
+def main():
+  n = int(input())
+  for i in range(n):
+    y, x = map(int, input().split())
+    z = max(y, x)
+    if z % 2 == 0:
+      if y == z:
+        print(z * z - x + 1)
+      else:
+        print((z - 1) * (z - 1) + y)
+    else:
+      if x == z:
+        print(z * z - y + 1)
+      else:
+        print((z - 1) * (z - 1) + x)
+  return
 
-  return spiral
-  
-def get_spiral_index(y,x):
-    
 
-def main:
-  tests=0
-  spiral = build_spiral(y,x)
-  input(tests)
-  for i in range(tests):
-    input(y,x)
-    get_spiral_index(y,x)
-    print(f"{spiral[y,x]}")
-  
+main()
   
